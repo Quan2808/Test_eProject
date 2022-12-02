@@ -40,17 +40,20 @@
                         <h6 class="card-subtitle text-muted">$ 39.90</h6>
                         <br>
                         <p class="card-text">Size:
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
-                                <label class="form-check-label" for="inlineRadio1">S</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
-                                <label class="form-check-label" for="inlineRadio2">M</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" required>
-                                <label class="form-check-label" for="inlineRadio3">L</label>
+                            <span id="Size"></span>
+                            <div onclick="Checksize()">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="S" required>
+                                    <label class="form-check-label" for="inlineRadio1">S</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="M" required>
+                                    <label class="form-check-label" for="inlineRadio2">M</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="L" required>
+                                    <label class="form-check-label" for="inlineRadio3">L</label>
+                                </div>
                             </div>
                         </p>
                         <p class="card-text">Quantity:
@@ -190,5 +193,14 @@
         </div>
     </div>
     </div>
+    <script>
+        function Checksize() {
+            var ele = document.getElementsByName('inlineRadioOptions');
 
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    document.getElementById("Size").innerHTML = ele[i].value;
+            }
+        }
+    </script>
 </body>

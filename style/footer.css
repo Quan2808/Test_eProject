@@ -1,0 +1,55 @@
+
+.commit{
+    background-color: rgb(43, 43, 43);
+    display: flex;
+    color: white;
+    height: 80px;
+}
+.commit div{
+    margin: auto;
+}
+
+.container input {
+    outline: 0;
+    width: 300px;
+    border-width: 0 0 0.5px ;
+    border-color: rgb(0, 0, 0)
+}
+.box1 h2,input{
+    padding-top: 20px;
+}
+.box2 p a{
+    text-decoration: none;
+    color: black;
+    display:block;
+    margin-top: 8px;
+}
+.box2 p a:hover{
+ color: rgb(179, 179, 179);
+}
+.box2 div a img{
+    width: 30px;
+    margin: 10px 40px 0px 0px;
+}
+.row p{
+    margin-left: 15px;
+}
+.row div img{
+    margin: 10px 0px 0px 10px;
+}
+.btn-custom-light{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 0.5px;
+}
+.btn-custom-light:hover{
+    background-color: black;
+    color: white;
+}
+#spcae_top{
+    margin-top: 5%;
+}
+#spcae_bot{
+    margin-bot: 5%;
+}

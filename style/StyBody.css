@@ -1,0 +1,65 @@
+.text_center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card ul
+{
+    display: flex;
+}
+.card ul li
+{
+    margin: 10px;
+    padding: 10px;
+    list-style: none;
+}
+p { margin:0 }
+img{
+    width: 100%;
+}
+.nut_dropdown {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* Thiết lập vị trí cho thẻ div với class dropdown*/
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Nội dung Dropdown */
+  .noidung_dropdown {
+    /*Ẩn nội dụng các đường dẫn*/
+    display: none;
+    position: absolute;
+ 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Thiết kế style cho các đường dẫn tronng Dropdown */
+  .noidung_dropdown a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .hienThi{
+    display:block;
+  }
+  .text:hover{
+    text-decoration: none;
+    color: rgb(179, 179, 179); 
+  }
+  .text{
+    color: black;
+  }
+  #center{
+    margin-left: 5%;
+  }

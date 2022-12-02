@@ -1,0 +1,50 @@
+#head h3{
+    text-align: center;
+}
+#head p{
+    text-align: center;
+}
+.title {
+    list-style-type: none;
+    font-size:x-small;
+    margin-left: 45px;
+}
+.title a{
+    color: black;
+    text-decoration: none;
+}
+.title a:hover{
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+}
+.select{
+    float: right;
+    margin-right: 40px;
+    border: none;
+    border-style: none;
+}
+img{
+    width: 100%;
+}
+.Card ul {
+    list-style-type: none;
+    display: flex;
+}
+.Card ul li {
+    margin-left: auto;
+     margin-right: auto;
+}
+.text{
+    color: black;
+    list-style: none;
+}
+.text:hover{
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+}
+.card-bundle-deal{
+    transition: transform.2s;
+}
+.card-bundle-deal:hover{
+    transform: scale(1.1);
+}

@@ -20,40 +20,40 @@ app.config(function($routeProvider) {
   .when("/register", {
     templateUrl : "../menu/register.html"
   })
-  .when("/iora1", {
+  .when("/iORA", {
     templateUrl : "../nav/iORA_1.html"
   })
-  .when("/iora2", {
+  .when("/IORA/iORA/page2", {
     templateUrl : "../IORA/iORA_2.html"
   })
-  .when("/iora3", {
+  .when("/IORA/iORA/page3", {
     templateUrl : "../IORA/iORA_3.html"
   })
-  .when("/iora4", {
+  .when("/IORA/iORA/page4", {
     templateUrl : "../IORA/iORA_4.html"
   })
-  .when("/iora5", {
+  .when("/IORA/iORA_Bottoms", {
     templateUrl : "../IORA/iORA_Bottoms.html"
   })
-  .when("/iora6", {
+  .when("/IORA/iORA_KnitAndSweaters", {
     templateUrl : "../IORA/iORA_KnitAndSweaters.html"
   })
-  .when("/iora7", {
+  .when("/IORA/iORA_NewArrival", {
     templateUrl : "../IORA/iORA_NewArrival.html"
   })
-  .when("/iora8", {
+  .when("/IORA/iORA_Skirts", {
     templateUrl : "../IORA/iORA_Skirts.html"
   })
-  .when("/iora9", {
+  .when("/IORA/iORA_Tops", {
     templateUrl : "../IORA/iORA_Tops.html"
   })
-  .when("/bundledeal1", {
+  .when("/bundledeal/2 FOR $29.90", {
     templateUrl : "../bundledeal/bundledeal1.html"
   })
-  .when("/bundledeal2", {
+  .when("/bundledeal/2 FOR $49.90", {
     templateUrl : "../bundledeal/bundledeal2.html"
   })
-  .when("/bags1", {
+  .when("/Accessories/Bags", {
     templateUrl : "../accessories/Bags_.html"
   })
   .when("/lalu1", {
@@ -74,7 +74,7 @@ app.config(function($routeProvider) {
   .when("/lalutops", {
     templateUrl : "../lalu/laluTops.html"
   })
-  .when("/shoe1", {
+  .when("/Accessories/Shoes", {
     templateUrl : "../accessories/Shoes_.html"
   })
   .when("/cookies", {
@@ -115,6 +115,9 @@ app.config(function($routeProvider) {
   })
   .when("/Blog_2", {
     templateUrl : "../blog/Blog_2.html"
+  })
+  .when("/IORA/Product/Highneck Knit Tank Top", {
+    templateUrl : "../IORA/Product/Highneck Knit Tank Top.html"
   })
 
   

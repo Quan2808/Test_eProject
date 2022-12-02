@@ -110,7 +110,34 @@ app.config(function($routeProvider) {
   .when("/returns-exchange", {
     templateUrl : "../footer/nav/returns-exchange.html"
   })
+  .when("/Blog_1", {
+    templateUrl : "../blog/Blog_1.html"
+  })
+  .when("/Blog_2", {
+    templateUrl : "../blog/Blog_2.html"
+  })
 
   
 })
+   // kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+   var offset = 300;
+   // thời gian di trượt 0.75s ( 1000 = 1s )
+   var duration = 150;
+   $(function(){
+   $(window).scroll(function () {
+   if ($(this).scrollTop() > offset)
+   $('#top-up').fadeIn(duration);
+   else
+   $('#top-up').fadeOut(duration);
+   });
+   $('#top-up').click(function () {
+   $('body,html').animate({scrollTop: 0}, duration);
+   });
+   });
+   $(function(){
+
+   $('a').click(function () {
+   $('body,html').animate({scrollTop: 0}, duration);
+   });
+   });
 

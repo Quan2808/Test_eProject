@@ -1,79 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <!-- Import thư viện JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+            <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-    <script src="javascrip/index.js"></script>
-    <style>
+  <script src="javascrip/index.js"></script>
+  <style>
 
-    </style>
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+   #top-up {
+font-size: 3rem;
+cursor: pointer;
+position: fixed;
+z-index: 9999;
+color:#004993;
+bottom: 20px;
+right: 15px;
+display: none;
+}
+#top-up:hover {
+color: #333
+}
+  </style>
     <title>home</title>
 </head>
-
 <body>
-
-    <body ng-app="myApp">
+    <body ng-app="myApp" >
         <div class="header">
             <div class="free">
-                <p>Free Delivery within Singapore $25 minium purchase</p>
+                 <p >Free Delivery within Singapore $25 minium purchase</p>
             </div>
             <div class="possition">
-                <div class="menu">
-                    <div class="locationStore" style="font-size: 15px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                 <div class="menu">
+                         <div class="locationStore" style="font-size: 15px;">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                           </svg>
-                        <a style="text-decoration:none;" href="#!findStore"> Find a store</a>
-                    </div>
-                    <div>
-                        <a style="text-decoration:none;" href="./index.html" style="font-size: 40px; font-family:'Times New Roman', Times, serif ;">
-                            <h1>iORA</h1>
-                        </a>
-                    </div>
-                    <div>
-                        <a style="text-decoration:none;" href="#!favourite">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                           <a style="text-decoration:none;" href="#!findStore"> Find a store</a>
+                         </div>
+                         <div>
+                             <a style="text-decoration:none;" href="./index.html" style="font-size: 40px; font-family:'Times New Roman', Times, serif ;">
+                              <h1>iORA</h1> </a>
+                         </div>
+                         <div>
+                            <a style="text-decoration:none;" href="#!favourite"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                               </svg>
-                        </a>
-                        <a style="text-decoration:none;" href="#!shoppingCard">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            </a>
+                            <a style="text-decoration:none;" href="#!shoppingCard">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                              </svg>
-                        </a>
-                        <a style="text-decoration:none;" href="#!login">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                              </svg>  
+                            </a>
+                            <a style="text-decoration:none;" href="#!login"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
                                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
-                              </svg>
-                        </a>
-                        <a style="text-decoration:none;" href="">
-                            <span data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                              </svg>  
+                            </a>
+                            <a style="text-decoration:none;" href="">
+                              <span  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
     
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                 </svg>
       
                               </span>
-                        </a>
-
-
-                        <!-- Button trigger modal -->
-
-                        <!-- Modal -->
-                        <!-- <div
+                            </a>
+    
+                          
+                                <!-- Button trigger modal -->
+                                
+                                <!-- Modal -->
+                                <!-- <div
                                 class="modal fade" id="staticBackdrop"
                                  data-bs-backdrop="static" data-bs-keyboard="false"
                                   tabindex="-1" aria-labelledby="staticBackdropLabel"
@@ -98,156 +117,157 @@
                                     </div>
                                   </div>
                                 </div> -->
-                    </div>
-                </div>
-                <div class="naBar">
-                    <ul>
-                        <li>
-                            <div class="dropdown">
-                                <div class="dropbtn">
-                                    <a style="text-decoration:none;" href="#!iora1">iORA</a>
-                                </div>
-                                <div class="dropdown-content">
-                                    <a href="#!iora7">NEW ARRIVALS</a>
-                                    <a href="#!iora9">TOPS</a>
-                                    <a href="#!iora5">BOTTOMS</a>
-                                    <a href="#!iora8">SKIRTS</a>
-                                    <a href="">DRESS/ONE PIECE</a>
-                                    <a href="#!iora6">KNITS & SWEATERS</a>
-                                    <a href="">OUTERWEAR</a>
-                                    <a href="">OFFICE WEAR</a>
-                                </div>
-                            </div>
+                         </div>
+                 </div>
+                 <div class="naBar">
+                     <ul>
+                         <li><div class="dropdown">
+                             <div class="dropbtn">
+                              <a style="text-decoration:none;" href="#!iora1">iORA</a>
+                             </div>
+                             <div class="dropdown-content">
+                                <a href="#!iora7">NEW ARRIVALS</a>
+                                <a href="#!iora9">TOPS</a>
+                                <a href="#!iora5">BOTTOMS</a>
+                                <a href="#!iora8">SKIRTS</a>
+                                <a href="">DRESS/ONE PIECE</a>
+                                <a href="#!iora6">KNITS & SWEATERS</a>
+                                <a href="">OUTERWEAR</a>
+                                <a href="">OFFICE WEAR</a>
+                             </div>
+                           </div>
                         </li>
-                        <li>
-                            <div class="dropdown">
-                                <div class="dropbtn"><a style="text-decoration:none;" href="#!lalu1">LALU</a></div>
-                                <div class="dropdown-content">
-                                    <a href="#!lalubottom">NEW ARRIVALS</a>
-                                    <a href="#!lalunewarri">TOPS</a>
-                                    <a href="#!laluskirts">BOTTOMS</a>
-                                    <a href="#!lalutops">SKIRTS</a>
-                                    <a href="">DRESS/ONE PIECE</a>
-                                    <a href="">KNITS & SWEATERS</a>
-                                    <a href="">OUTERWEAR</a>
-                                    <a href="">OFFICE WEAR</a>
-                                </div>
+                        <li><div class="dropdown">
+                            <div  class="dropbtn"><a style="text-decoration:none;" href="#!lalu1">LALU</a></div>
+                            <div class="dropdown-content">
+                                <a href="#!lalubottom">NEW ARRIVALS</a>
+                                <a href="#!lalunewarri">TOPS</a>
+                                <a href="#!laluskirts">BOTTOMS</a>
+                                <a href="#!lalutops">SKIRTS</a>
+                                <a href="">DRESS/ONE PIECE</a>
+                                <a href="">KNITS & SWEATERS</a>
+                                <a href="">OUTERWEAR</a>
+                                <a href="">OFFICE WEAR</a>
                             </div>
-                        </li>
-                        <li>
-                            <div class="dropdown">
-                                <div class="dropbtn"><a style="text-decoration:none;" href="#!Accessories">ACCESSORIES</a></div>
-                                <div class="dropdown-content">
-                                    <a href="#!bags1">BAGS</a>
-                                    <a href="#!shoe1">SHOES</a>
-
-                                </div>
-                            </div>
-                        </li>
-                        <li><a style="text-decoration:none;color:yellowgreen; margin-right: 20px; " href="#!onlineexclusive">
+                          </div>
+                       </li>
+                       <li><div class="dropdown">
+                        <div class="dropbtn"><a style="text-decoration:none;" href="#!Accessories">ACCESSORIES</a></div>
+                        <div class="dropdown-content">
+                          <a href="#!bags1">BAGS</a>
+                          <a href="#!shoe1">SHOES</a>
+                         
+                        </div>
+                      </div>
+                   </li>
+                         <li><a style="text-decoration:none;color:yellowgreen; margin-right: 20px; " href="#!onlineexclusive">
                             ONLINE EXCLUSIVE</a></li>
-                        <li><a href="#!sale" style="text-decoration:none; color:red">SALE</a></li>
-
-                        <li>
-                            <div class="dropdown">
-                                <div class="dropbtn"><a style="text-decoration:none;" href="">BUNDLE DEAL</a></div>
-                                <div class="dropdown-content">
-                                    <a href="#!bundledeal1">2 FOR $29.90</a>
-                                    <a href="#!bundledeal2">2 FOR $49.90</a>
-                                </div>
+                         <li><a href="#!sale" style="text-decoration:none; color:red">SALE</a></li>
+     
+                         <li>
+                          <div class="dropdown">
+                            <div class="dropbtn"><a style="text-decoration:none;" href="">BUNDLE DEAL</a></div>
+                            <div class="dropdown-content">
+                              <a href="#!bundledeal1">2 FOR $29.90</a>
+                              <a href="#!bundledeal2">2 FOR $49.90</a>
                             </div>
-                        </li>
-                        <li><a style="text-decoration:none;" href="">BACK IN STOCK</a></li>
-                        <li>
-                            <div class="dropdown">
-                                <div class="dropbtn">STORIES</div>
-                                <div class="dropdown-content">
-                                    <a href="#">iORA</a>
-                                    <a href="#">LALU</a>
-                                    <a href="#">SORA</a>
-                                </div>
+                          </div>
+                       </li>
+                         <li><a style="text-decoration:none;" href="">BACK IN STOCK</a></li>
+                         <li><div class="dropdown">
+                            <div class="dropbtn">STORIES</div>
+                            <div class="dropdown-content">
+                              <a href="#">iORA</a>
+                              <a href="#">LALU</a>
+                              <a href="#">SORA</a>
                             </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div ng-view></div>
+                          </div>
+                       </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+        
+        <div ng-view  ></div>
         <!-- footer -->
         <div>
-
-            <div class="commit">
-                <div><img style="width:20px" height="20px" src="image/return.png" alt=""> 30-day Retail Exchange</div>
-                <div><img style="width:20px" height="20px" src="image/box.png" alt=""> Click and Collect</div>
-                <div><img style="width:20px" height="20px" src="image/lock.png" alt=""> Secure Checkout</div>
-                <div><img style="width:20px" height="20px" src="image/offline.png" alt=""> Worldwide Shipping</div>
-            </div>
-            <div class="container" id="spcae_top">
-                <div class="row">
-                    <div class="box1 col-sm-8">
-                        <h3><b>Sign up for our Newsletter</b></h3>
-                        <h6>Be the first to know about our product launch and exclusive deals.</h6>
-                        <input type="email" placeholder="Email Address *"><button class="btn-custom-light">Subscribe</button>
-                    </div>
-                    <div class="box2 col-sm-4">
-                        <p>
-                            <a href="#!AboutUs"> ABOUT US </a>
-                            <a href="#!ContactUs"> CONTACT US</a>
-                            <a href=""> STORES</a>
-                            <a href=""> STORIES</a>
-                            <a href=""> ON-GOING PROMOTIONS</a>
-                            <a href="#!campaigns"> CAMPAIGNS </a>
-                            <a href=""> CAREERS</a>
-                            <a href=""> SIZE GUIDE</a>
-                            <a href="#!returns-exchange"> RETURNS & EXCHANGE</a>
-                            <a href="#!methods-cost"> DELIVERY METHODS & COSTS</a>
-                        </p>
-                        <div style="margin-left: 20px;">
-                            <a href="https://api.whatsapp.com/" target="_blank">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            
+        <div class="commit">
+            <div><img style="width:20px" height="20px"  src="image/return.png" alt=""> 30-day Retail Exchange</div>
+            <div><img style="width:20px" height="20px" src="image/box.png" alt=""> Click and Collect</div>
+            <div><img style="width:20px" height="20px" src="image/lock.png" alt=""> Secure Checkout</div>
+            <div><img style="width:20px" height="20px" src="image/offline.png" alt=""> Worldwide Shipping</div>
+        </div>
+        <div class="container" id="spcae_top">
+            <div class="row">
+                <div class="box1 col-sm-8">
+                    <h3><b>Sign up for our Newsletter</b></h3>
+                    <h6>Be the first to know about our product launch and exclusive deals.</h6>
+                    <input  type="email"  placeholder="Email Address *"><button class="btn-custom-light">Subscribe</button>
+                </div>
+                <div class="box2 col-sm-4">
+                    <p>
+                        <a href="#!AboutUs"> ABOUT US </a>
+                        <a href="#!ContactUs"> CONTACT US</a>
+                        <a href=""> STORES</a>
+                        <a href=""> STORIES</a>
+                        <a href=""> ON-GOING PROMOTIONS</a>
+                        <a href="#!campaigns"> CAMPAIGNS </a>
+                        <a href=""> CAREERS</a>
+                        <a href=""> SIZE GUIDE</a>
+                        <a href="#!returns-exchange"> RETURNS & EXCHANGE</a>
+                        <a href="#!methods-cost"> DELIVERY METHODS & COSTS</a>
+                    </p>
+                    <div style="margin-left: 20px;">
+                        <a href="https://api.whatsapp.com/" target="_blank">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                                 <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
                               </svg>
 
-                            </a>
-                            <a href="https://t.me/iorasg" target="_blank">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                        </a>
+                        <a href="https://t.me/iorasg" target="_blank">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
                               </svg>
 
-                            </a>
-                            <a href="https://www.facebook.com/iorasg/" target="_blank">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        </a>
+                        <a href="https://www.facebook.com/iorasg/" target="_blank">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
                             </svg>
 
-                            </a>
-                            <a href="https://www.instagram.com/iorasg/" target="_blank">
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        </a>
+                        <a href="https://www.instagram.com/iorasg/" target="_blank">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
                               </svg>
 
-                            </a>
-                        </div>
+                        </a>
                     </div>
-                    <p>
-                        Copyright © 2022 iORA SINGAPORE, all rights reserved. <br>
-                        <a href="#!terms" style="text-decoration:none; color:black">Terms of Service</a> | <a href="#!privacy" style="text-decoration:none; color:black">Privacy Policy</a> |
-                        <a href="#!cookies" style="text-decoration:none; color:black">Cookies Policy</a>
-
-                    </p>
-
-                    <div> <br><img style="width: 260px;height: 28px;" src="image/payment-gateway-sg.jpg.webp" alt=""></div>
                 </div>
+                <p>
+                    Copyright © 2022 iORA SINGAPORE, all rights reserved. <br>
+                    <a href="#!terms" style="text-decoration:none; color:black">Terms of Service</a> | <a href="#!privacy" style="text-decoration:none; color:black">Privacy Policy</a> | 
+                    <a href="#!cookies" style="text-decoration:none; color:black">Cookies Policy</a>
+
+                </p>
+                
+                <div> <br><img style="width: 260px;height: 28px;"  src="image/payment-gateway-sg.jpg.webp" alt=""></div>
             </div>
         </div>
+    </div> 
+    <div style="text-align:center; font-size:30px;"><a href='#' title="Back to top">&#710;</a></div>
+
         </div>
-
-    </body>
+        <script>
+       
+          </script>
+          <div title="Về đầu trang" id="top-up">
+          <i class="fas fa-arrow-circle-up"></i></div>
+        </body>
 </body>
-
 </html>
